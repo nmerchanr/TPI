@@ -3,6 +3,7 @@ from PIL import Image
 from streamlit_option_menu import option_menu
 import numpy as np
 
+st.set_page_config(page_title="Our-Data", page_icon=":globe_with_meridians:")
 
 st.sidebar.title("Our-Data")
 st.sidebar.image(Image.open('logo.jpg'))
