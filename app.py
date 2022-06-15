@@ -20,9 +20,27 @@ if selected == "Inicio":
 
     st.image(Image.open('protecdata.png'))
 
+    st.title("Nuestros servicios :page_with_curl:")
+
+    st.markdown("Ofrecemos diferentes servicios en asesoramiento y consultoría para las empresas en materia de protección y tratamiento de datos personales. Nuestros principales servicios se enuncian a continuación.")
+
+    st.subheader("1) Diagnósitico :mag_right:")
+
+    st.markdown("Ofrecemos el servicio de diagnóstico de posibles fallas y carencias de la empresa en protección y tratamiento de datos. Por medio del formulario dado en esta página, la empresa podrá hacer un diagnóstico general del estado de la organización en cumplimiento de la ley 1581 de 2012 y darse cuenta de posibles faltas a esta ley. Posterior a este formulario, la empresa podrá solicitar un asesoramiento y diagnóstico más profundo para poder tomar decisiones y realizar acciones correctivas.")
+
+    st.image(Image.open('diagnostico.png'))
+
+    st.subheader("2) Virtualización de datos :floppy_disk:")
+
+    st.markdown("Atendemos el constante cambio gracias a la revolución tecnológica y sabemos que la importancia de la virtualización de los datos y el almacenamiento de estos en la nube para garantizar la protección de los mismos. Por esto, ofrecemos el servicio de migración de datos a la nube el cual posee ventajas sobre los esquemas tradicionales de almacenamiento. De esta manera, se pueden obtener los mejores resultados en materia de protección y tratamiento de datos.")
+
+    st.image(Image.open('virtual.png'))
+
     st.markdown("""<hr style="border:2px dashed Salmon;border-radius:5px;" /> """, unsafe_allow_html=True)
 
-    st.title("¿Quienes somos?")
+
+
+    st.title("¿Quienes somos? :busts_in_silhouette:")
 
     cols = st.columns(3)
 
