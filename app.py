@@ -177,16 +177,16 @@ if selected == "Formulario de diagnósitco de la empresa":
 
             st.header("Análisis de cada respuesta según la Ley 1581 de 2012 :mag:")
 
-            st.markdown("** Pregunta: ¿" + nombre + " posee un proceso establecido de consulta de información personal en sus bases de datos?**")
+            st.markdown("**Pregunta: ¿" + nombre + " posee un proceso establecido de consulta de información personal en sus bases de datos?**")
             if data["P1"] == "Si":
                 st.success("Cumple con Artículo 14. Ley 1581 de 2012. Consultas. Los Titulares o sus causahabientes podrán consultar la información personal del Titular que repose en cualquier base de datos, sea esta del sector público o privado. El Responsable del Tratamiento o Encargado del Tratamiento deberán suministrar a estos toda la información contenida en el registro individual o que esté vinculada con la identificación del Titular.")
-                st.markdown("** Pregunta: ¿" + nombre + " mantiene pruebas y registros de las consultas que se hacen a los datos personales de los usuarios por parte del responsable o encargado del tratamiento?**")
+                st.markdown("**Pregunta: ¿" + nombre + " mantiene pruebas y registros de las consultas que se hacen a los datos personales de los usuarios por parte del responsable o encargado del tratamiento?**")
                 if data["P2"] == "Si":
                     st.success("Cumple con Artículo 14. Ley 1581 de 2012. Consultas. La consulta se formulará por el medio habilitado por el Responsable del Tratamiento o Encargado del Tratamiento, siempre y cuando se pueda mantener prueba de esta.")
                 else:
                     st.error("No cumple con Artículo 14. Ley 1581 de 2012. Consultas. La consulta se formulará por el medio habilitado por el Responsable del Tratamiento o Encargado del Tratamiento, siempre y cuando se pueda mantener prueba de esta.")
                 
-                st.markdown("** Pregunta: ¿En qué plazo en días hábiles la empresa cumple las consultas de datos personales solicitadas?**")
+                st.markdown("**Pregunta: ¿En qué plazo en días hábiles la empresa cumple las consultas de datos personales solicitadas?**")
                 if data["P5"] <= 10:
                     st.success("Cumple satisfactoriamente con Artículo 14. Ley 1581 de 2012. Consultas. La consulta será atendida en un término máximo de diez (10) días hábiles contados a partir de la fecha de recibo de la misma. Cuando no fuere posible atender la consulta dentro de dicho término, se informará al interesado, expresando los motivos de la demora y señalando la fecha en que se atenderá su consulta, la cual en ningún caso podrá superar los cinco (5) días hábiles siguientes al vencimiento del primer término.")
                 elif data["P5"] <= 15:
@@ -197,24 +197,24 @@ if selected == "Formulario de diagnósitco de la empresa":
             else:
                 st.error("No Cumple con Artículo 14. Ley 1581 de 2012. Consultas. Los Titulares o sus causahabientes podrán consultar la información personal del Titular que repose en cualquier base de datos, sea esta del sector público o privado. El Responsable del Tratamiento o Encargado del Tratamiento deberán suministrar a estos toda la información contenida en el registro individual o que esté vinculada con la identificación del Titular.")
 
-            st.markdown("** Pregunta: ¿Se tiene establecido quienes son los responsables y encargados del tratamiento de los datos personales de los usuarios?**")
+            st.markdown("**Pregunta: ¿Se tiene establecido quienes son los responsables y encargados del tratamiento de los datos personales de los usuarios?**")
             if data["P3"] == "Si":
                 st.success("Cumple con Artículo 12. Ley 1581 de 2012. Deber de informar al Titular. El Responsable del Tratamiento, al momento de solicitar al Titular la autorización, deberá informarle de manera clara y expresa lo siguiente: ... d) La identificación, dirección física o electrónica y teléfono del Responsable del Tratamiento.")
             else:
                 st.error("No cumple con Artículo 12. Ley 1581 de 2012. Deber de informar al Titular. El Responsable del Tratamiento, al momento de solicitar al Titular la autorización, deberá informarle de manera clara y expresa lo siguiente: ... d) La identificación, dirección física o electrónica y teléfono del Responsable del Tratamiento.")
             
-            st.markdown("** Pregunta: ¿La empresa " + nombre + " tiene un proceso de reclamo por parte de los usuarios sobre su información personal frente al responsable o encargado del tratamiento? (actualización, corrección, suspensión o incumplimiento)**")
+            st.markdown("**Pregunta: ¿La empresa " + nombre + " tiene un proceso de reclamo por parte de los usuarios sobre su información personal frente al responsable o encargado del tratamiento? (actualización, corrección, suspensión o incumplimiento)**")
 
             if data["P4"] == "Si":
                 st.success("Cumple con Artículo 15. Ley 1581 de 2012. Reclamos. El Titular o sus causahabientes que consideren que la información contenida en una base de datos debe ser objeto de corrección, actualización o supresión, o cuando adviertan el presunto incumplimiento de cualquiera de los deberes contenidos en esta ley, podrán presentar un reclamo ante el Responsable del Tratamiento o el Encargado del Tratamiento")
-                st.markdown("** Pregunta: ¿Usa la empresa en sus bases de datos las leyendas 'reclamo en trámite' o 'información en discusión judicial' para marcar la información que lo requiera?**")
+                st.markdown("**Pregunta: ¿Usa la empresa en sus bases de datos las leyendas 'reclamo en trámite' o 'información en discusión judicial' para marcar la información que lo requiera?**")
                 if data["P6"] == "Si":
                     st.success("Cumple con Artículo 18. Deberes de los Encargados del Tratamiento. Los Encargados del Tratamiento deberán cumplir los siguientes deberes, sin perjuicio de las demás disposiciones previstas en la presente ley y en otras que rijan su actividad: ... g) Registrar en la base de datos las leyenda 'reclamo en trámite' en la forma en que se regula en la presente ley... h) Insertar en la base de datos la leyenda 'información en discusión judicial' una vez notificado por parte de la autoridad competente sobre procesos judiciales relacionados con la calidad del dato personal.")
                 else:
                     st.error("No cumple con Artículo 18. Deberes de los Encargados del Tratamiento. Los Encargados del Tratamiento deberán cumplir los siguientes deberes, sin perjuicio de las demás disposiciones previstas en la presente ley y en otras que rijan su actividad: ... g) Registrar en la base de datos las leyenda 'reclamo en trámite' en la forma en que se regula en la presente ley... h) Insertar en la base de datos la leyenda 'información en discusión judicial' una vez notificado por parte de la autoridad competente sobre procesos judiciales relacionados con la calidad del dato personal.")
                 
 
-                st.markdown("** Pregunta: ¿En qué plazo en días hábiles cumple la empresa con los reclamos recibidos?**")
+                st.markdown("**Pregunta: ¿En qué plazo en días hábiles cumple la empresa con los reclamos recibidos?**")
                 if data["P7"] <= 15:
                     st.success("Cumple satisfactoriamente con Artículo 15. Ley 1581 de 2012. Reclamos. 3. El término máximo para atender el reclamo será de quince (15) días hábiles contados a partir del día siguiente a la fecha de su recibo. Cuando no fuere posible atender el reclamo dentro de dicho término, se informará al interesado los motivos de la demora y la fecha en que se atenderá su reclamo, la cual en ningún caso podrá superar los ocho (8) días hábiles siguientes al vencimiento del primer término.")
                 elif data["P7"] <= 23:
@@ -226,10 +226,10 @@ if selected == "Formulario de diagnósitco de la empresa":
             else:
                 st.error("No cumple Artículo 15. Ley 1581 de 2012. Reclamos. El Titular o sus causahabientes que consideren que la información contenida en una base de datos debe ser objeto de corrección, actualización o supresión, o cuando adviertan el presunto incumplimiento de cualquiera de los deberes contenidos en esta ley, podrán presentar un reclamo ante el Responsable del Tratamiento o el Encargado del Tratamiento.")
             
-            st.markdown("** Pregunta: ¿El responsable del trantamiento de datos personales de la empresa solicita autorización clara al usuario para el uso de estos?**")
+            st.markdown("**Pregunta: ¿El responsable del trantamiento de datos personales de la empresa solicita autorización clara al usuario para el uso de estos?**")
             if data["P8"] == "Si":
                 st.success("Cumple con Artículo 9. Autorización del Titular. Sin perjuicio de las excepciones previstas en la ley, en el Tratamiento se requiere la autorización previa e informada del Titular, la cual deberá ser obtenida por cualquier medio que pueda ser objeto de consulta posterior.")
-                st.markdown("** Pregunta: ¿Informa debidamente al Titular sobre la finalidad de la recolección y los derechos que le asisten por virtud de la autorización otorgada?**")
+                st.markdown("**Pregunta: ¿Informa debidamente al Titular sobre la finalidad de la recolección y los derechos que le asisten por virtud de la autorización otorgada?**")
                 if data["P9"] == "Si":
                     st.success("Cumple con Artículo 12. Deber de informar al Titular. El Responsable del Tratamiento, al momento de solicitar al Titular la autorización, deberá informarle de manera clara y expresa lo siguiente: a) El Tratamiento al cual serán sometidos sus datos personales y la finalidad del mismo.")
                 else: 
@@ -237,25 +237,25 @@ if selected == "Formulario de diagnósitco de la empresa":
             else:
                 st.error("No cumple con Artículo 9. Autorización del Titular. Sin perjuicio de las excepciones previstas en la ley, en el Tratamiento se requiere la autorización previa e informada del Titular, la cual deberá ser obtenida por cualquier medio que pueda ser objeto de consulta posterior.")
 
-            st.markdown("** Pregunta: ¿La empresa posee las medidas de seguridad necesarias sobre los datos personales que impidan la adulteración, perdida, consulta, uso y acceso no autorizado o fraudulento?**")
+            st.markdown("**Pregunta: ¿La empresa posee las medidas de seguridad necesarias sobre los datos personales que impidan la adulteración, perdida, consulta, uso y acceso no autorizado o fraudulento?**")
             if data["P10"] == "Si":
                 st.success("Cumple con Artículo 4. Principios para el Tratamiento de datos personales... g) Principio de seguridad: La información sujeta a Tratamiento por el Responsable del Tratamiento o Encargado del Tratamiento a que se refiere la presente ley, se deberá manejar con las medidas técnicas, humanas y administrativas que sean necesarias para otorgar seguridad a los registros evitando su adulteración, pérdida, consulta, uso o acceso no autorizado o fraudulento.")
             else: 
                 st.error("No cumple con Artículo 4. Principios para el Tratamiento de datos personales... g) Principio de seguridad: La información sujeta a Tratamiento por el Responsable del Tratamiento o Encargado del Tratamiento a que se refiere la presente ley, se deberá manejar con las medidas técnicas, humanas y administrativas que sean necesarias para otorgar seguridad a los registros evitando su adulteración, pérdida, consulta, uso o acceso no autorizado o fraudulento.")
 
-            st.markdown("** Pregunta: ¿La empresa tiene un proceso periódico establecido de actualización y rectificación de datos?**")
+            st.markdown("**Pregunta: ¿La empresa tiene un proceso periódico establecido de actualización y rectificación de datos?**")
             if data["P11"] == "Si":
                 st.success("Cumple con Artículo 17. Deberes de los Responsables del Tratamiento. f) Actualizar la información, comunicando de forma oportuna al Encargado del Tratamiento, todas las novedades respecto de los datos que previamente le haya suministrado y adoptar las demás medidas necesarias para que la información suministrada a este se mantenga actualizada...  g) Rectificar la información cuando sea incorrecta y comunicar lo pertinente al Encargado del Tratamiento.")
             else:
                 st.error("No cumple con Artículo 17. Deberes de los Responsables del Tratamiento. f) Actualizar la información, comunicando de forma oportuna al Encargado del Tratamiento, todas las novedades respecto de los datos que previamente le haya suministrado y adoptar las demás medidas necesarias para que la información suministrada a este se mantenga actualizada...  g) Rectificar la información cuando sea incorrecta y comunicar lo pertinente al Encargado del Tratamiento.")
             
-            st.markdown("** Pregunta: ¿Se exige al encargado de los datos el respeto a las condiciones de privacidad y seguridad de los datos?**")
+            st.markdown("**Pregunta: ¿Se exige al encargado de los datos el respeto a las condiciones de privacidad y seguridad de los datos?**")
             if data["P12"] == "Si":
                 st.success("Cumple con Artículo 17. Deberes de los Responsables del Tratamiento. i) Exigir al Encargado del Tratamiento en todo momento, el respeto a las condiciones de seguridad y privacidad de la información del Titular.")
             else:
                 st.error("No cumple con Artículo 17. Deberes de los Responsables del Tratamiento. i) Exigir al Encargado del Tratamiento en todo momento, el respeto a las condiciones de seguridad y privacidad de la información del Titular.")
             
-            st.markdown("** Pregunta: ¿La empresa tiene un manual interno de políticas y procedimientos para garantizar el adecuado cumplimiento de la ley 1581 de 2012 y en especial, para la atención de consultas y reclamos?**")
+            st.markdown("**Pregunta: ¿La empresa tiene un manual interno de políticas y procedimientos para garantizar el adecuado cumplimiento de la ley 1581 de 2012 y en especial, para la atención de consultas y reclamos?**")
             
             if data["P13"] == "Si":
                 st.success("Cumple con Artículo 17. Deberes de los Responsables del Tratamiento. k) Adoptar un manual interno de políticas y procedimientos para garantizar el adecuado cumplimiento de la presente ley y en especial, para la atención de consultas y reclamos.")
